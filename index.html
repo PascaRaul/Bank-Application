@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="style.css" />
+    <title>Bank app</title>
+  </head>
+  <body>
+    <nav>
+      <h3>Bank application</h3>
+      <p class="welocome">Login to get started</p>
+      <form class="login">
+        <input type="text" class="login__user" placeholder="user" />
+        <input type="password" class="login__password" placeholder="password" />
+        <button class="login__btn">&rarrc;</button>
+        <button class="login__btn register">Register</button>
+      </form>
+    </nav>
+
+    <main class="app">
+      <div class="balance">
+        <h4 class="balance__label">Current balance</h4>
+        <p class="balance__value">1000$</p>
+      </div>
+
+      <div class="transfer">
+        <form class="form transfer__form">
+          <h2>Transfer money</h2>
+          <div class="transfer__container">
+            <input type="text" class="input transfer__input" />
+            <input type="number" class="input transfer__input__value" />
+            <button class="form__btn transfer__btn">&rarrc;</button>
+            <label class="label transfer__label">Transfer to</label>
+            <label class="label transfer__label">Amount</label>
+          </div>
+        </form>
+      </div>
+
+      <div class="loan">
+        <form class="form loan__form">
+          <h2>Request loan</h2>
+          <div class="loan__container">
+            <input type="number" class="input loan__input" />
+            <button class="form__btn loan__btn">&rarrc;</button>
+            <label class="label loan__label">Amount</label>
+          </div>
+        </form>
+      </div>
+
+      <div class="movements">
+        <div class="movements__deposit">
+          <div class="movement__type movement__type--deposit">
+            <strong>1</strong> deposit
+          </div>
+          <div class="movement__value">2000$</div>
+        </div>
+        <div class="movements__withdrawal">
+          <div class="movement__type movement__type--withdrawal">
+            <strong>2</strong> withdrawal
+          </div>
+          <div class="movement__value">1700$</div>
+        </div>
+      </div>
+
+      <div class="summary">
+        <div class="summary__in">
+          <div class="summary__label">In</div>
+          <div class="summary__value summary__value--in">2500$</div>
+        </div>
+        <div class="summary__out">
+          <div class="summary__label">Out</div>
+          <div class="summary__value summary__value--out">1400$</div>
+        </div>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

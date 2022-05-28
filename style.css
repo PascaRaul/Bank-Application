@@ -1,0 +1,289 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: sans-serif;
+  color: #333;
+  background-color: #f3f3f3;
+  height: 100vh;
+}
+
+strong {
+  font-weight: 600;
+}
+
+/* -----------NAV--------- */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+}
+
+.login {
+  display: flex;
+}
+
+.login__user,
+.login__password {
+  border: none;
+  padding: 0.5rem 2rem;
+  font-size: 1.6rem;
+  width: 20rem;
+  border: 1px solid rgb(116, 116, 116);
+  border-radius: 10rem;
+  margin-right: 1rem;
+}
+
+.login__user:focus {
+  outline: none;
+  border: 1px solid rgb(109, 40, 40);
+}
+
+.login__user::placeholder {
+  color: #bbb;
+}
+
+.login__btn {
+  border: none;
+  padding: 0.5rem 2rem;
+  font-size: 2.2rem;
+  background: none;
+  cursor: pointer;
+}
+
+.login__btn:hover {
+  color: #777;
+}
+
+.register {
+  font-size: 1.6rem;
+  text-transform: uppercase;
+}
+
+nav p {
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+nav h3 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #555;
+}
+
+/* -----------main--------- */
+
+.app {
+  display: grid;
+  position: relative;
+  max-width: 120rem;
+  align-items: center;
+  margin: 6rem auto;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 1fr 1fr;
+
+  row-gap: 0;
+  column-gap: 2rem;
+  background-color: rgb(237, 237, 237);
+
+  opacity: 0;
+  transition: all 1s;
+}
+
+.label {
+  font-size: 1.4rem;
+}
+
+/* -----------balance--------- */
+
+.balance {
+  grid-column: 1/2;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem 2rem;
+}
+
+.balance__label {
+  font-size: 2.2rem;
+  color: #333;
+}
+
+.balance__value {
+  font-size: 2rem;
+}
+
+/* -----------Transfer--------- */
+
+.transfer {
+  background: linear-gradient(
+    90deg,
+    rgba(231, 9, 32, 0.6) 0%,
+    rgba(210, 1, 6, 0.6) 100%
+  );
+  border-radius: 2rem;
+  padding: 4.1rem 2rem;
+}
+
+.transfer h2 {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.transfer__container {
+  display: grid;
+  grid-template-columns: 15rem 15rem 5rem;
+  column-gap: 1rem;
+  row-gap: 0.5rem;
+}
+
+.input {
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1.6rem;
+
+  border: 1px solid rgb(116, 116, 116);
+  border-radius: 10rem;
+}
+
+.transfer__label {
+  padding-left: 1rem;
+}
+
+.form__btn {
+  border: none;
+  border: 1px solid #000;
+  font-size: 2.2rem;
+  background: none;
+  cursor: pointer;
+}
+
+.form__btn:focus {
+  outline: none;
+  border: 1px solid rgb(109, 40, 40);
+}
+
+.form__btn:hover {
+  color: #444;
+}
+
+/* -----------Loan--------- */
+
+.loan {
+  grid-row: 3/4;
+  grid-column: 1/2;
+  background: linear-gradient(
+    90deg,
+    rgba(46, 143, 0, 0.6) 0%,
+    rgba(7, 180, 134, 0.6) 100%
+  );
+  border-radius: 2rem;
+  padding: 4.1rem 2rem;
+}
+
+.loan h2 {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.loan__container {
+  display: grid;
+  grid-template-columns: 15rem 5rem;
+  column-gap: 1rem;
+  row-gap: 0.5rem;
+}
+
+.loan__label {
+  padding-left: 1rem;
+}
+
+/* -----------Movements--------- */
+
+.movements {
+  grid-row: 2 / span 2;
+  grid-column: 2/3;
+  align-self: start;
+  height: 33.2rem;
+  overflow: scroll;
+  background-color: #fff;
+  border-radius: 1rem;
+  padding: 2rem;
+  padding-bottom: 0;
+  color: #333;
+}
+
+.movements__deposit,
+.movements__withdrawal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #eee;
+}
+
+.movement__type {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.movement__value {
+  font-size: 1.8rem;
+  padding-right: 10rem;
+}
+
+.movement__type--deposit {
+  background-color: rgba(0, 128, 0, 0.372);
+  padding: 0.5rem 2rem;
+  border-radius: 5rem;
+}
+
+.movement__type--withdrawal {
+  background-color: rgba(255, 0, 0, 0.365);
+  padding: 0.5rem 2rem;
+  border-radius: 5rem;
+}
+
+/* -----------Summary--------- */
+
+.summary {
+  grid-row: 1/2;
+  grid-column: 2/3;
+  display: flex;
+  align-items: center;
+  gap: 6rem;
+}
+
+.summary__in,
+.summary__out {
+  display: flex;
+  gap: 2rem;
+}
+
+.summary__label {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.summary__value {
+  font-size: 2rem;
+}
+
+/* --------------------- */
+
+@media (max-width: 50em) {
+  html {
+    font-size: 25%;
+  }
+}
