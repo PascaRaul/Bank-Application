@@ -1,4 +1,4 @@
-## Bank app aplication
+## Bank app
 
 https://bank-app-simulator.netlify.app/
 
