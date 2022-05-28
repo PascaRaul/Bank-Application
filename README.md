@@ -9,3 +9,5 @@ Two test accounts were created:
 You can also register an account and you'll be initialised with 1000$. </br>
 The registered accounts are stored in Browser storage API.</br>
 You can transfer money between accounts and you can request a loan.</br>
+</br>
+--the app is not fully responsive, for better user experience use laptop/desktop--
